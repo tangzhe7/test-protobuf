@@ -14,19 +14,2773 @@ public final class AddressBookProtos {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  static final com.google.protobuf.Descriptors.Descriptor
+  public interface PersonOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cc.protobuf.Person)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes();
+
+    /**
+     * <code>int32 id = 2;</code>
+     * @return The id.
+     */
+    int getId();
+
+    /**
+     * <code>string emial = 3;</code>
+     * @return The emial.
+     */
+    java.lang.String getEmial();
+    /**
+     * <code>string emial = 3;</code>
+     * @return The bytes for emial.
+     */
+    com.google.protobuf.ByteString
+        getEmialBytes();
+
+    /**
+     * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+     */
+    java.util.List<cc.protobuf.model.AddressBookProtos.Person.PhoneNumber> 
+        getPhoneList();
+    /**
+     * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+     */
+    cc.protobuf.model.AddressBookProtos.Person.PhoneNumber getPhone(int index);
+    /**
+     * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+     */
+    int getPhoneCount();
+    /**
+     * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+     */
+    java.util.List<? extends cc.protobuf.model.AddressBookProtos.Person.PhoneNumberOrBuilder> 
+        getPhoneOrBuilderList();
+    /**
+     * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+     */
+    cc.protobuf.model.AddressBookProtos.Person.PhoneNumberOrBuilder getPhoneOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code cc.protobuf.Person}
+   */
+  public static final class Person extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:cc.protobuf.Person)
+      PersonOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Person.newBuilder() to construct.
+    private Person(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Person() {
+      name_ = "";
+      emial_ = "";
+      phone_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Person();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Person(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              name_ = s;
+              break;
+            }
+            case 16: {
+
+              id_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              emial_ = s;
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                phone_ = new java.util.ArrayList<cc.protobuf.model.AddressBookProtos.Person.PhoneNumber>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              phone_.add(
+                  input.readMessage(cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (com.google.protobuf.UninitializedMessageException e) {
+        throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          phone_ = java.util.Collections.unmodifiableList(phone_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cc.protobuf.model.AddressBookProtos.internal_static_cc_protobuf_Person_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cc.protobuf.model.AddressBookProtos.internal_static_cc_protobuf_Person_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cc.protobuf.model.AddressBookProtos.Person.class, cc.protobuf.model.AddressBookProtos.Person.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code cc.protobuf.Person.PhoneType}
+     */
+    public enum PhoneType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>MOBILE = 0;</code>
+       */
+      MOBILE(0),
+      /**
+       * <code>HOME = 1;</code>
+       */
+      HOME(1),
+      /**
+       * <code>WORK = 3;</code>
+       */
+      WORK(3),
+      UNRECOGNIZED(-1),
+      ;
+
+      /**
+       * <code>MOBILE = 0;</code>
+       */
+      public static final int MOBILE_VALUE = 0;
+      /**
+       * <code>HOME = 1;</code>
+       */
+      public static final int HOME_VALUE = 1;
+      /**
+       * <code>WORK = 3;</code>
+       */
+      public static final int WORK_VALUE = 3;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PhoneType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static PhoneType forNumber(int value) {
+        switch (value) {
+          case 0: return MOBILE;
+          case 1: return HOME;
+          case 3: return WORK;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<PhoneType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          PhoneType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<PhoneType>() {
+              public PhoneType findValueByNumber(int number) {
+                return PhoneType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return cc.protobuf.model.AddressBookProtos.Person.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final PhoneType[] VALUES = values();
+
+      public static PhoneType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private PhoneType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:cc.protobuf.Person.PhoneType)
+    }
+
+    public interface PhoneNumberOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:cc.protobuf.Person.PhoneNumber)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>string number = 1;</code>
+       * @return The number.
+       */
+      java.lang.String getNumber();
+      /**
+       * <code>string number = 1;</code>
+       * @return The bytes for number.
+       */
+      com.google.protobuf.ByteString
+          getNumberBytes();
+
+      /**
+       * <code>.cc.protobuf.Person.PhoneType rtpe = 2;</code>
+       * @return The enum numeric value on the wire for rtpe.
+       */
+      int getRtpeValue();
+      /**
+       * <code>.cc.protobuf.Person.PhoneType rtpe = 2;</code>
+       * @return The rtpe.
+       */
+      cc.protobuf.model.AddressBookProtos.Person.PhoneType getRtpe();
+    }
+    /**
+     * Protobuf type {@code cc.protobuf.Person.PhoneNumber}
+     */
+    public static final class PhoneNumber extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:cc.protobuf.Person.PhoneNumber)
+        PhoneNumberOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use PhoneNumber.newBuilder() to construct.
+      private PhoneNumber(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private PhoneNumber() {
+        number_ = "";
+        rtpe_ = 0;
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new PhoneNumber();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private PhoneNumber(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                number_ = s;
+                break;
+              }
+              case 16: {
+                int rawValue = input.readEnum();
+
+                rtpe_ = rawValue;
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cc.protobuf.model.AddressBookProtos.internal_static_cc_protobuf_Person_PhoneNumber_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cc.protobuf.model.AddressBookProtos.internal_static_cc_protobuf_Person_PhoneNumber_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.class, cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.Builder.class);
+      }
+
+      public static final int NUMBER_FIELD_NUMBER = 1;
+      private volatile java.lang.Object number_;
+      /**
+       * <code>string number = 1;</code>
+       * @return The number.
+       */
+      @java.lang.Override
+      public java.lang.String getNumber() {
+        java.lang.Object ref = number_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          number_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string number = 1;</code>
+       * @return The bytes for number.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getNumberBytes() {
+        java.lang.Object ref = number_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          number_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int RTPE_FIELD_NUMBER = 2;
+      private int rtpe_;
+      /**
+       * <code>.cc.protobuf.Person.PhoneType rtpe = 2;</code>
+       * @return The enum numeric value on the wire for rtpe.
+       */
+      @java.lang.Override public int getRtpeValue() {
+        return rtpe_;
+      }
+      /**
+       * <code>.cc.protobuf.Person.PhoneType rtpe = 2;</code>
+       * @return The rtpe.
+       */
+      @java.lang.Override public cc.protobuf.model.AddressBookProtos.Person.PhoneType getRtpe() {
+        @SuppressWarnings("deprecation")
+        cc.protobuf.model.AddressBookProtos.Person.PhoneType result = cc.protobuf.model.AddressBookProtos.Person.PhoneType.valueOf(rtpe_);
+        return result == null ? cc.protobuf.model.AddressBookProtos.Person.PhoneType.UNRECOGNIZED : result;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(number_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 1, number_);
+        }
+        if (rtpe_ != cc.protobuf.model.AddressBookProtos.Person.PhoneType.MOBILE.getNumber()) {
+          output.writeEnum(2, rtpe_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(number_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, number_);
+        }
+        if (rtpe_ != cc.protobuf.model.AddressBookProtos.Person.PhoneType.MOBILE.getNumber()) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, rtpe_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof cc.protobuf.model.AddressBookProtos.Person.PhoneNumber)) {
+          return super.equals(obj);
+        }
+        cc.protobuf.model.AddressBookProtos.Person.PhoneNumber other = (cc.protobuf.model.AddressBookProtos.Person.PhoneNumber) obj;
+
+        if (!getNumber()
+            .equals(other.getNumber())) return false;
+        if (rtpe_ != other.rtpe_) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getNumber().hashCode();
+        hash = (37 * hash) + RTPE_FIELD_NUMBER;
+        hash = (53 * hash) + rtpe_;
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static cc.protobuf.model.AddressBookProtos.Person.PhoneNumber parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.PhoneNumber parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.PhoneNumber parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.PhoneNumber parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.PhoneNumber parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.PhoneNumber parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.PhoneNumber parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.PhoneNumber parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.PhoneNumber parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.PhoneNumber parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.PhoneNumber parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.PhoneNumber parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(cc.protobuf.model.AddressBookProtos.Person.PhoneNumber prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code cc.protobuf.Person.PhoneNumber}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:cc.protobuf.Person.PhoneNumber)
+          cc.protobuf.model.AddressBookProtos.Person.PhoneNumberOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return cc.protobuf.model.AddressBookProtos.internal_static_cc_protobuf_Person_PhoneNumber_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return cc.protobuf.model.AddressBookProtos.internal_static_cc_protobuf_Person_PhoneNumber_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.class, cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.Builder.class);
+        }
+
+        // Construct using cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          number_ = "";
+
+          rtpe_ = 0;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return cc.protobuf.model.AddressBookProtos.internal_static_cc_protobuf_Person_PhoneNumber_descriptor;
+        }
+
+        @java.lang.Override
+        public cc.protobuf.model.AddressBookProtos.Person.PhoneNumber getDefaultInstanceForType() {
+          return cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public cc.protobuf.model.AddressBookProtos.Person.PhoneNumber build() {
+          cc.protobuf.model.AddressBookProtos.Person.PhoneNumber result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public cc.protobuf.model.AddressBookProtos.Person.PhoneNumber buildPartial() {
+          cc.protobuf.model.AddressBookProtos.Person.PhoneNumber result = new cc.protobuf.model.AddressBookProtos.Person.PhoneNumber(this);
+          result.number_ = number_;
+          result.rtpe_ = rtpe_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof cc.protobuf.model.AddressBookProtos.Person.PhoneNumber) {
+            return mergeFrom((cc.protobuf.model.AddressBookProtos.Person.PhoneNumber)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(cc.protobuf.model.AddressBookProtos.Person.PhoneNumber other) {
+          if (other == cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.getDefaultInstance()) return this;
+          if (!other.getNumber().isEmpty()) {
+            number_ = other.number_;
+            onChanged();
+          }
+          if (other.rtpe_ != 0) {
+            setRtpeValue(other.getRtpeValue());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          cc.protobuf.model.AddressBookProtos.Person.PhoneNumber parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (cc.protobuf.model.AddressBookProtos.Person.PhoneNumber) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private java.lang.Object number_ = "";
+        /**
+         * <code>string number = 1;</code>
+         * @return The number.
+         */
+        public java.lang.String getNumber() {
+          java.lang.Object ref = number_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            number_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string number = 1;</code>
+         * @return The bytes for number.
+         */
+        public com.google.protobuf.ByteString
+            getNumberBytes() {
+          java.lang.Object ref = number_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            number_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string number = 1;</code>
+         * @param value The number to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNumber(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          number_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string number = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearNumber() {
+          
+          number_ = getDefaultInstance().getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string number = 1;</code>
+         * @param value The bytes for number to set.
+         * @return This builder for chaining.
+         */
+        public Builder setNumberBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          number_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int rtpe_ = 0;
+        /**
+         * <code>.cc.protobuf.Person.PhoneType rtpe = 2;</code>
+         * @return The enum numeric value on the wire for rtpe.
+         */
+        @java.lang.Override public int getRtpeValue() {
+          return rtpe_;
+        }
+        /**
+         * <code>.cc.protobuf.Person.PhoneType rtpe = 2;</code>
+         * @param value The enum numeric value on the wire for rtpe to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRtpeValue(int value) {
+          
+          rtpe_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.cc.protobuf.Person.PhoneType rtpe = 2;</code>
+         * @return The rtpe.
+         */
+        @java.lang.Override
+        public cc.protobuf.model.AddressBookProtos.Person.PhoneType getRtpe() {
+          @SuppressWarnings("deprecation")
+          cc.protobuf.model.AddressBookProtos.Person.PhoneType result = cc.protobuf.model.AddressBookProtos.Person.PhoneType.valueOf(rtpe_);
+          return result == null ? cc.protobuf.model.AddressBookProtos.Person.PhoneType.UNRECOGNIZED : result;
+        }
+        /**
+         * <code>.cc.protobuf.Person.PhoneType rtpe = 2;</code>
+         * @param value The rtpe to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRtpe(cc.protobuf.model.AddressBookProtos.Person.PhoneType value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          
+          rtpe_ = value.getNumber();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>.cc.protobuf.Person.PhoneType rtpe = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearRtpe() {
+          
+          rtpe_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:cc.protobuf.Person.PhoneNumber)
+      }
+
+      // @@protoc_insertion_point(class_scope:cc.protobuf.Person.PhoneNumber)
+      private static final cc.protobuf.model.AddressBookProtos.Person.PhoneNumber DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new cc.protobuf.model.AddressBookProtos.Person.PhoneNumber();
+      }
+
+      public static cc.protobuf.model.AddressBookProtos.Person.PhoneNumber getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<PhoneNumber>
+          PARSER = new com.google.protobuf.AbstractParser<PhoneNumber>() {
+        @java.lang.Override
+        public PhoneNumber parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new PhoneNumber(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<PhoneNumber> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<PhoneNumber> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public cc.protobuf.model.AddressBookProtos.Person.PhoneNumber getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface AddressBookOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:cc.protobuf.Person.AddressBook)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated .cc.protobuf.Person people = 4;</code>
+       */
+      java.util.List<cc.protobuf.model.AddressBookProtos.Person> 
+          getPeopleList();
+      /**
+       * <code>repeated .cc.protobuf.Person people = 4;</code>
+       */
+      cc.protobuf.model.AddressBookProtos.Person getPeople(int index);
+      /**
+       * <code>repeated .cc.protobuf.Person people = 4;</code>
+       */
+      int getPeopleCount();
+      /**
+       * <code>repeated .cc.protobuf.Person people = 4;</code>
+       */
+      java.util.List<? extends cc.protobuf.model.AddressBookProtos.PersonOrBuilder> 
+          getPeopleOrBuilderList();
+      /**
+       * <code>repeated .cc.protobuf.Person people = 4;</code>
+       */
+      cc.protobuf.model.AddressBookProtos.PersonOrBuilder getPeopleOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code cc.protobuf.Person.AddressBook}
+     */
+    public static final class AddressBook extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:cc.protobuf.Person.AddressBook)
+        AddressBookOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use AddressBook.newBuilder() to construct.
+      private AddressBook(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private AddressBook() {
+        people_ = java.util.Collections.emptyList();
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new AddressBook();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private AddressBook(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 34: {
+                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                  people_ = new java.util.ArrayList<cc.protobuf.model.AddressBookProtos.Person>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                people_.add(
+                    input.readMessage(cc.protobuf.model.AddressBookProtos.Person.parser(), extensionRegistry));
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) != 0)) {
+            people_ = java.util.Collections.unmodifiableList(people_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cc.protobuf.model.AddressBookProtos.internal_static_cc_protobuf_Person_AddressBook_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cc.protobuf.model.AddressBookProtos.internal_static_cc_protobuf_Person_AddressBook_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cc.protobuf.model.AddressBookProtos.Person.AddressBook.class, cc.protobuf.model.AddressBookProtos.Person.AddressBook.Builder.class);
+      }
+
+      public static final int PEOPLE_FIELD_NUMBER = 4;
+      private java.util.List<cc.protobuf.model.AddressBookProtos.Person> people_;
+      /**
+       * <code>repeated .cc.protobuf.Person people = 4;</code>
+       */
+      @java.lang.Override
+      public java.util.List<cc.protobuf.model.AddressBookProtos.Person> getPeopleList() {
+        return people_;
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person people = 4;</code>
+       */
+      @java.lang.Override
+      public java.util.List<? extends cc.protobuf.model.AddressBookProtos.PersonOrBuilder> 
+          getPeopleOrBuilderList() {
+        return people_;
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person people = 4;</code>
+       */
+      @java.lang.Override
+      public int getPeopleCount() {
+        return people_.size();
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person people = 4;</code>
+       */
+      @java.lang.Override
+      public cc.protobuf.model.AddressBookProtos.Person getPeople(int index) {
+        return people_.get(index);
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person people = 4;</code>
+       */
+      @java.lang.Override
+      public cc.protobuf.model.AddressBookProtos.PersonOrBuilder getPeopleOrBuilder(
+          int index) {
+        return people_.get(index);
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        for (int i = 0; i < people_.size(); i++) {
+          output.writeMessage(4, people_.get(i));
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        for (int i = 0; i < people_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, people_.get(i));
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof cc.protobuf.model.AddressBookProtos.Person.AddressBook)) {
+          return super.equals(obj);
+        }
+        cc.protobuf.model.AddressBookProtos.Person.AddressBook other = (cc.protobuf.model.AddressBookProtos.Person.AddressBook) obj;
+
+        if (!getPeopleList()
+            .equals(other.getPeopleList())) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        if (getPeopleCount() > 0) {
+          hash = (37 * hash) + PEOPLE_FIELD_NUMBER;
+          hash = (53 * hash) + getPeopleList().hashCode();
+        }
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static cc.protobuf.model.AddressBookProtos.Person.AddressBook parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.AddressBook parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.AddressBook parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.AddressBook parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.AddressBook parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.AddressBook parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.AddressBook parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.AddressBook parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.AddressBook parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.AddressBook parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.AddressBook parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static cc.protobuf.model.AddressBookProtos.Person.AddressBook parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(cc.protobuf.model.AddressBookProtos.Person.AddressBook prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code cc.protobuf.Person.AddressBook}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:cc.protobuf.Person.AddressBook)
+          cc.protobuf.model.AddressBookProtos.Person.AddressBookOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return cc.protobuf.model.AddressBookProtos.internal_static_cc_protobuf_Person_AddressBook_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return cc.protobuf.model.AddressBookProtos.internal_static_cc_protobuf_Person_AddressBook_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  cc.protobuf.model.AddressBookProtos.Person.AddressBook.class, cc.protobuf.model.AddressBookProtos.Person.AddressBook.Builder.class);
+        }
+
+        // Construct using cc.protobuf.model.AddressBookProtos.Person.AddressBook.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+            getPeopleFieldBuilder();
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          if (peopleBuilder_ == null) {
+            people_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            peopleBuilder_.clear();
+          }
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return cc.protobuf.model.AddressBookProtos.internal_static_cc_protobuf_Person_AddressBook_descriptor;
+        }
+
+        @java.lang.Override
+        public cc.protobuf.model.AddressBookProtos.Person.AddressBook getDefaultInstanceForType() {
+          return cc.protobuf.model.AddressBookProtos.Person.AddressBook.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public cc.protobuf.model.AddressBookProtos.Person.AddressBook build() {
+          cc.protobuf.model.AddressBookProtos.Person.AddressBook result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public cc.protobuf.model.AddressBookProtos.Person.AddressBook buildPartial() {
+          cc.protobuf.model.AddressBookProtos.Person.AddressBook result = new cc.protobuf.model.AddressBookProtos.Person.AddressBook(this);
+          int from_bitField0_ = bitField0_;
+          if (peopleBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) != 0)) {
+              people_ = java.util.Collections.unmodifiableList(people_);
+              bitField0_ = (bitField0_ & ~0x00000001);
+            }
+            result.people_ = people_;
+          } else {
+            result.people_ = peopleBuilder_.build();
+          }
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof cc.protobuf.model.AddressBookProtos.Person.AddressBook) {
+            return mergeFrom((cc.protobuf.model.AddressBookProtos.Person.AddressBook)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(cc.protobuf.model.AddressBookProtos.Person.AddressBook other) {
+          if (other == cc.protobuf.model.AddressBookProtos.Person.AddressBook.getDefaultInstance()) return this;
+          if (peopleBuilder_ == null) {
+            if (!other.people_.isEmpty()) {
+              if (people_.isEmpty()) {
+                people_ = other.people_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+              } else {
+                ensurePeopleIsMutable();
+                people_.addAll(other.people_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.people_.isEmpty()) {
+              if (peopleBuilder_.isEmpty()) {
+                peopleBuilder_.dispose();
+                peopleBuilder_ = null;
+                people_ = other.people_;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                peopleBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getPeopleFieldBuilder() : null;
+              } else {
+                peopleBuilder_.addAllMessages(other.people_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          cc.protobuf.model.AddressBookProtos.Person.AddressBook parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (cc.protobuf.model.AddressBookProtos.Person.AddressBook) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<cc.protobuf.model.AddressBookProtos.Person> people_ =
+          java.util.Collections.emptyList();
+        private void ensurePeopleIsMutable() {
+          if (!((bitField0_ & 0x00000001) != 0)) {
+            people_ = new java.util.ArrayList<cc.protobuf.model.AddressBookProtos.Person>(people_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            cc.protobuf.model.AddressBookProtos.Person, cc.protobuf.model.AddressBookProtos.Person.Builder, cc.protobuf.model.AddressBookProtos.PersonOrBuilder> peopleBuilder_;
+
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public java.util.List<cc.protobuf.model.AddressBookProtos.Person> getPeopleList() {
+          if (peopleBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(people_);
+          } else {
+            return peopleBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public int getPeopleCount() {
+          if (peopleBuilder_ == null) {
+            return people_.size();
+          } else {
+            return peopleBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public cc.protobuf.model.AddressBookProtos.Person getPeople(int index) {
+          if (peopleBuilder_ == null) {
+            return people_.get(index);
+          } else {
+            return peopleBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public Builder setPeople(
+            int index, cc.protobuf.model.AddressBookProtos.Person value) {
+          if (peopleBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensurePeopleIsMutable();
+            people_.set(index, value);
+            onChanged();
+          } else {
+            peopleBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public Builder setPeople(
+            int index, cc.protobuf.model.AddressBookProtos.Person.Builder builderForValue) {
+          if (peopleBuilder_ == null) {
+            ensurePeopleIsMutable();
+            people_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            peopleBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public Builder addPeople(cc.protobuf.model.AddressBookProtos.Person value) {
+          if (peopleBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensurePeopleIsMutable();
+            people_.add(value);
+            onChanged();
+          } else {
+            peopleBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public Builder addPeople(
+            int index, cc.protobuf.model.AddressBookProtos.Person value) {
+          if (peopleBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensurePeopleIsMutable();
+            people_.add(index, value);
+            onChanged();
+          } else {
+            peopleBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public Builder addPeople(
+            cc.protobuf.model.AddressBookProtos.Person.Builder builderForValue) {
+          if (peopleBuilder_ == null) {
+            ensurePeopleIsMutable();
+            people_.add(builderForValue.build());
+            onChanged();
+          } else {
+            peopleBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public Builder addPeople(
+            int index, cc.protobuf.model.AddressBookProtos.Person.Builder builderForValue) {
+          if (peopleBuilder_ == null) {
+            ensurePeopleIsMutable();
+            people_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            peopleBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public Builder addAllPeople(
+            java.lang.Iterable<? extends cc.protobuf.model.AddressBookProtos.Person> values) {
+          if (peopleBuilder_ == null) {
+            ensurePeopleIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, people_);
+            onChanged();
+          } else {
+            peopleBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public Builder clearPeople() {
+          if (peopleBuilder_ == null) {
+            people_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000001);
+            onChanged();
+          } else {
+            peopleBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public Builder removePeople(int index) {
+          if (peopleBuilder_ == null) {
+            ensurePeopleIsMutable();
+            people_.remove(index);
+            onChanged();
+          } else {
+            peopleBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public cc.protobuf.model.AddressBookProtos.Person.Builder getPeopleBuilder(
+            int index) {
+          return getPeopleFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public cc.protobuf.model.AddressBookProtos.PersonOrBuilder getPeopleOrBuilder(
+            int index) {
+          if (peopleBuilder_ == null) {
+            return people_.get(index);  } else {
+            return peopleBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public java.util.List<? extends cc.protobuf.model.AddressBookProtos.PersonOrBuilder> 
+             getPeopleOrBuilderList() {
+          if (peopleBuilder_ != null) {
+            return peopleBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(people_);
+          }
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public cc.protobuf.model.AddressBookProtos.Person.Builder addPeopleBuilder() {
+          return getPeopleFieldBuilder().addBuilder(
+              cc.protobuf.model.AddressBookProtos.Person.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public cc.protobuf.model.AddressBookProtos.Person.Builder addPeopleBuilder(
+            int index) {
+          return getPeopleFieldBuilder().addBuilder(
+              index, cc.protobuf.model.AddressBookProtos.Person.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .cc.protobuf.Person people = 4;</code>
+         */
+        public java.util.List<cc.protobuf.model.AddressBookProtos.Person.Builder> 
+             getPeopleBuilderList() {
+          return getPeopleFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilderV3<
+            cc.protobuf.model.AddressBookProtos.Person, cc.protobuf.model.AddressBookProtos.Person.Builder, cc.protobuf.model.AddressBookProtos.PersonOrBuilder> 
+            getPeopleFieldBuilder() {
+          if (peopleBuilder_ == null) {
+            peopleBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+                cc.protobuf.model.AddressBookProtos.Person, cc.protobuf.model.AddressBookProtos.Person.Builder, cc.protobuf.model.AddressBookProtos.PersonOrBuilder>(
+                    people_,
+                    ((bitField0_ & 0x00000001) != 0),
+                    getParentForChildren(),
+                    isClean());
+            people_ = null;
+          }
+          return peopleBuilder_;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:cc.protobuf.Person.AddressBook)
+      }
+
+      // @@protoc_insertion_point(class_scope:cc.protobuf.Person.AddressBook)
+      private static final cc.protobuf.model.AddressBookProtos.Person.AddressBook DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new cc.protobuf.model.AddressBookProtos.Person.AddressBook();
+      }
+
+      public static cc.protobuf.model.AddressBookProtos.Person.AddressBook getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<AddressBook>
+          PARSER = new com.google.protobuf.AbstractParser<AddressBook>() {
+        @java.lang.Override
+        public AddressBook parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AddressBook(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<AddressBook> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AddressBook> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public cc.protobuf.model.AddressBookProtos.Person.AddressBook getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ID_FIELD_NUMBER = 2;
+    private int id_;
+    /**
+     * <code>int32 id = 2;</code>
+     * @return The id.
+     */
+    @java.lang.Override
+    public int getId() {
+      return id_;
+    }
+
+    public static final int EMIAL_FIELD_NUMBER = 3;
+    private volatile java.lang.Object emial_;
+    /**
+     * <code>string emial = 3;</code>
+     * @return The emial.
+     */
+    @java.lang.Override
+    public java.lang.String getEmial() {
+      java.lang.Object ref = emial_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        emial_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string emial = 3;</code>
+     * @return The bytes for emial.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEmialBytes() {
+      java.lang.Object ref = emial_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        emial_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PHONE_FIELD_NUMBER = 4;
+    private java.util.List<cc.protobuf.model.AddressBookProtos.Person.PhoneNumber> phone_;
+    /**
+     * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<cc.protobuf.model.AddressBookProtos.Person.PhoneNumber> getPhoneList() {
+      return phone_;
+    }
+    /**
+     * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends cc.protobuf.model.AddressBookProtos.Person.PhoneNumberOrBuilder> 
+        getPhoneOrBuilderList() {
+      return phone_;
+    }
+    /**
+     * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+     */
+    @java.lang.Override
+    public int getPhoneCount() {
+      return phone_.size();
+    }
+    /**
+     * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+     */
+    @java.lang.Override
+    public cc.protobuf.model.AddressBookProtos.Person.PhoneNumber getPhone(int index) {
+      return phone_.get(index);
+    }
+    /**
+     * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+     */
+    @java.lang.Override
+    public cc.protobuf.model.AddressBookProtos.Person.PhoneNumberOrBuilder getPhoneOrBuilder(
+        int index) {
+      return phone_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
+      }
+      if (id_ != 0) {
+        output.writeInt32(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emial_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, emial_);
+      }
+      for (int i = 0; i < phone_.size(); i++) {
+        output.writeMessage(4, phone_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
+      }
+      if (id_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, id_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(emial_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, emial_);
+      }
+      for (int i = 0; i < phone_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, phone_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof cc.protobuf.model.AddressBookProtos.Person)) {
+        return super.equals(obj);
+      }
+      cc.protobuf.model.AddressBookProtos.Person other = (cc.protobuf.model.AddressBookProtos.Person) obj;
+
+      if (!getName()
+          .equals(other.getName())) return false;
+      if (getId()
+          != other.getId()) return false;
+      if (!getEmial()
+          .equals(other.getEmial())) return false;
+      if (!getPhoneList()
+          .equals(other.getPhoneList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getName().hashCode();
+      hash = (37 * hash) + ID_FIELD_NUMBER;
+      hash = (53 * hash) + getId();
+      hash = (37 * hash) + EMIAL_FIELD_NUMBER;
+      hash = (53 * hash) + getEmial().hashCode();
+      if (getPhoneCount() > 0) {
+        hash = (37 * hash) + PHONE_FIELD_NUMBER;
+        hash = (53 * hash) + getPhoneList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static cc.protobuf.model.AddressBookProtos.Person parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cc.protobuf.model.AddressBookProtos.Person parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cc.protobuf.model.AddressBookProtos.Person parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cc.protobuf.model.AddressBookProtos.Person parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cc.protobuf.model.AddressBookProtos.Person parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cc.protobuf.model.AddressBookProtos.Person parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cc.protobuf.model.AddressBookProtos.Person parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cc.protobuf.model.AddressBookProtos.Person parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cc.protobuf.model.AddressBookProtos.Person parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static cc.protobuf.model.AddressBookProtos.Person parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cc.protobuf.model.AddressBookProtos.Person parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cc.protobuf.model.AddressBookProtos.Person parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(cc.protobuf.model.AddressBookProtos.Person prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code cc.protobuf.Person}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cc.protobuf.Person)
+        cc.protobuf.model.AddressBookProtos.PersonOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cc.protobuf.model.AddressBookProtos.internal_static_cc_protobuf_Person_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cc.protobuf.model.AddressBookProtos.internal_static_cc_protobuf_Person_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cc.protobuf.model.AddressBookProtos.Person.class, cc.protobuf.model.AddressBookProtos.Person.Builder.class);
+      }
+
+      // Construct using cc.protobuf.model.AddressBookProtos.Person.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getPhoneFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        name_ = "";
+
+        id_ = 0;
+
+        emial_ = "";
+
+        if (phoneBuilder_ == null) {
+          phone_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          phoneBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cc.protobuf.model.AddressBookProtos.internal_static_cc_protobuf_Person_descriptor;
+      }
+
+      @java.lang.Override
+      public cc.protobuf.model.AddressBookProtos.Person getDefaultInstanceForType() {
+        return cc.protobuf.model.AddressBookProtos.Person.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public cc.protobuf.model.AddressBookProtos.Person build() {
+        cc.protobuf.model.AddressBookProtos.Person result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public cc.protobuf.model.AddressBookProtos.Person buildPartial() {
+        cc.protobuf.model.AddressBookProtos.Person result = new cc.protobuf.model.AddressBookProtos.Person(this);
+        int from_bitField0_ = bitField0_;
+        result.name_ = name_;
+        result.id_ = id_;
+        result.emial_ = emial_;
+        if (phoneBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            phone_ = java.util.Collections.unmodifiableList(phone_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.phone_ = phone_;
+        } else {
+          result.phone_ = phoneBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cc.protobuf.model.AddressBookProtos.Person) {
+          return mergeFrom((cc.protobuf.model.AddressBookProtos.Person)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cc.protobuf.model.AddressBookProtos.Person other) {
+        if (other == cc.protobuf.model.AddressBookProtos.Person.getDefaultInstance()) return this;
+        if (!other.getName().isEmpty()) {
+          name_ = other.name_;
+          onChanged();
+        }
+        if (other.getId() != 0) {
+          setId(other.getId());
+        }
+        if (!other.getEmial().isEmpty()) {
+          emial_ = other.emial_;
+          onChanged();
+        }
+        if (phoneBuilder_ == null) {
+          if (!other.phone_.isEmpty()) {
+            if (phone_.isEmpty()) {
+              phone_ = other.phone_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePhoneIsMutable();
+              phone_.addAll(other.phone_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.phone_.isEmpty()) {
+            if (phoneBuilder_.isEmpty()) {
+              phoneBuilder_.dispose();
+              phoneBuilder_ = null;
+              phone_ = other.phone_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              phoneBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPhoneFieldBuilder() : null;
+            } else {
+              phoneBuilder_.addAllMessages(other.phone_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cc.protobuf.model.AddressBookProtos.Person parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cc.protobuf.model.AddressBookProtos.Person) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object name_ = "";
+      /**
+       * <code>string name = 1;</code>
+       * @return The name.
+       */
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          name_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return The bytes for name.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes() {
+        java.lang.Object ref = name_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          name_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        name_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        
+        name_ = getDefaultInstance().getName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string name = 1;</code>
+       * @param value The bytes for name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        name_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int id_ ;
+      /**
+       * <code>int32 id = 2;</code>
+       * @return The id.
+       */
+      @java.lang.Override
+      public int getId() {
+        return id_;
+      }
+      /**
+       * <code>int32 id = 2;</code>
+       * @param value The id to set.
+       * @return This builder for chaining.
+       */
+      public Builder setId(int value) {
+        
+        id_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearId() {
+        
+        id_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object emial_ = "";
+      /**
+       * <code>string emial = 3;</code>
+       * @return The emial.
+       */
+      public java.lang.String getEmial() {
+        java.lang.Object ref = emial_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          emial_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string emial = 3;</code>
+       * @return The bytes for emial.
+       */
+      public com.google.protobuf.ByteString
+          getEmialBytes() {
+        java.lang.Object ref = emial_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          emial_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string emial = 3;</code>
+       * @param value The emial to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmial(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        emial_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string emial = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmial() {
+        
+        emial_ = getDefaultInstance().getEmial();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string emial = 3;</code>
+       * @param value The bytes for emial to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmialBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        emial_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<cc.protobuf.model.AddressBookProtos.Person.PhoneNumber> phone_ =
+        java.util.Collections.emptyList();
+      private void ensurePhoneIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          phone_ = new java.util.ArrayList<cc.protobuf.model.AddressBookProtos.Person.PhoneNumber>(phone_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          cc.protobuf.model.AddressBookProtos.Person.PhoneNumber, cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.Builder, cc.protobuf.model.AddressBookProtos.Person.PhoneNumberOrBuilder> phoneBuilder_;
+
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public java.util.List<cc.protobuf.model.AddressBookProtos.Person.PhoneNumber> getPhoneList() {
+        if (phoneBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(phone_);
+        } else {
+          return phoneBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public int getPhoneCount() {
+        if (phoneBuilder_ == null) {
+          return phone_.size();
+        } else {
+          return phoneBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public cc.protobuf.model.AddressBookProtos.Person.PhoneNumber getPhone(int index) {
+        if (phoneBuilder_ == null) {
+          return phone_.get(index);
+        } else {
+          return phoneBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public Builder setPhone(
+          int index, cc.protobuf.model.AddressBookProtos.Person.PhoneNumber value) {
+        if (phoneBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePhoneIsMutable();
+          phone_.set(index, value);
+          onChanged();
+        } else {
+          phoneBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public Builder setPhone(
+          int index, cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.Builder builderForValue) {
+        if (phoneBuilder_ == null) {
+          ensurePhoneIsMutable();
+          phone_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          phoneBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public Builder addPhone(cc.protobuf.model.AddressBookProtos.Person.PhoneNumber value) {
+        if (phoneBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePhoneIsMutable();
+          phone_.add(value);
+          onChanged();
+        } else {
+          phoneBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public Builder addPhone(
+          int index, cc.protobuf.model.AddressBookProtos.Person.PhoneNumber value) {
+        if (phoneBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePhoneIsMutable();
+          phone_.add(index, value);
+          onChanged();
+        } else {
+          phoneBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public Builder addPhone(
+          cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.Builder builderForValue) {
+        if (phoneBuilder_ == null) {
+          ensurePhoneIsMutable();
+          phone_.add(builderForValue.build());
+          onChanged();
+        } else {
+          phoneBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public Builder addPhone(
+          int index, cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.Builder builderForValue) {
+        if (phoneBuilder_ == null) {
+          ensurePhoneIsMutable();
+          phone_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          phoneBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public Builder addAllPhone(
+          java.lang.Iterable<? extends cc.protobuf.model.AddressBookProtos.Person.PhoneNumber> values) {
+        if (phoneBuilder_ == null) {
+          ensurePhoneIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, phone_);
+          onChanged();
+        } else {
+          phoneBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public Builder clearPhone() {
+        if (phoneBuilder_ == null) {
+          phone_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          phoneBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public Builder removePhone(int index) {
+        if (phoneBuilder_ == null) {
+          ensurePhoneIsMutable();
+          phone_.remove(index);
+          onChanged();
+        } else {
+          phoneBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.Builder getPhoneBuilder(
+          int index) {
+        return getPhoneFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public cc.protobuf.model.AddressBookProtos.Person.PhoneNumberOrBuilder getPhoneOrBuilder(
+          int index) {
+        if (phoneBuilder_ == null) {
+          return phone_.get(index);  } else {
+          return phoneBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public java.util.List<? extends cc.protobuf.model.AddressBookProtos.Person.PhoneNumberOrBuilder> 
+           getPhoneOrBuilderList() {
+        if (phoneBuilder_ != null) {
+          return phoneBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(phone_);
+        }
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.Builder addPhoneBuilder() {
+        return getPhoneFieldBuilder().addBuilder(
+            cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.Builder addPhoneBuilder(
+          int index) {
+        return getPhoneFieldBuilder().addBuilder(
+            index, cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .cc.protobuf.Person.PhoneNumber phone = 4;</code>
+       */
+      public java.util.List<cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.Builder> 
+           getPhoneBuilderList() {
+        return getPhoneFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          cc.protobuf.model.AddressBookProtos.Person.PhoneNumber, cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.Builder, cc.protobuf.model.AddressBookProtos.Person.PhoneNumberOrBuilder> 
+          getPhoneFieldBuilder() {
+        if (phoneBuilder_ == null) {
+          phoneBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              cc.protobuf.model.AddressBookProtos.Person.PhoneNumber, cc.protobuf.model.AddressBookProtos.Person.PhoneNumber.Builder, cc.protobuf.model.AddressBookProtos.Person.PhoneNumberOrBuilder>(
+                  phone_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          phone_ = null;
+        }
+        return phoneBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:cc.protobuf.Person)
+    }
+
+    // @@protoc_insertion_point(class_scope:cc.protobuf.Person)
+    private static final cc.protobuf.model.AddressBookProtos.Person DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new cc.protobuf.model.AddressBookProtos.Person();
+    }
+
+    public static cc.protobuf.model.AddressBookProtos.Person getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Person>
+        PARSER = new com.google.protobuf.AbstractParser<Person>() {
+      @java.lang.Override
+      public Person parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Person(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Person> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Person> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public cc.protobuf.model.AddressBookProtos.Person getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cc_protobuf_Person_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cc_protobuf_Person_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cc_protobuf_Person_PhoneNumber_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cc_protobuf_Person_PhoneNumber_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cc_protobuf_Person_AddressBook_descriptor;
-  static final 
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cc_protobuf_Person_AddressBook_fieldAccessorTable;
 
@@ -45,21 +2799,13 @@ public final class AddressBookProtos {
       "\001(\t\022+\n\004rtpe\030\002 \001(\0162\035.cc.protobuf.Person.P" +
       "honeType\0322\n\013AddressBook\022#\n\006people\030\004 \003(\0132" +
       "\023.cc.protobuf.Person\"+\n\tPhoneType\022\n\n\006MOB" +
-      "ILE\020\000\022\010\n\004HOME\020\001\022\010\n\004WORK\020\003B(\n\021cc.protobuf" +
-      ".modelB\021AddressBookProtosP\001b\006proto3"
+      "ILE\020\000\022\010\n\004HOME\020\001\022\010\n\004WORK\020\003B&\n\021cc.protobuf" +
+      ".modelB\021AddressBookProtosb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_cc_protobuf_Person_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_cc_protobuf_Person_fieldAccessorTable = new
